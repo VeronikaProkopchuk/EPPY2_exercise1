@@ -1,6 +1,11 @@
 setup.py
 walking_girl/__init__.py
 walking_girl/__main__.py
+walking_girl/bitmapfont.py
+walking_girl/config.py
+walking_girl/game.py
+walking_girl/marquee.py
+walking_girl/scroll.py
 walking_girl.egg-info/PKG-INFO
 walking_girl.egg-info/SOURCES.txt
 walking_girl.egg-info/dependency_links.txt
