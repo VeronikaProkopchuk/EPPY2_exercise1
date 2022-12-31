@@ -1,0 +1,16 @@
+{
+    "screen_size" : [640, 480],
+    "title" : "Walking_girl",
+    "fps" : 60,
+    "background_color" : [0,0,0],
+    "girl" : {
+        "path" : ["walking_girl", "assets", "images", "walking_animation.png"],
+        "columns" : 10,
+        "sprite_size" : [64, 128],
+        "total_sprites" : 20
+    },
+    "scroll" : {
+        "speed" : 0.1
+    }
+
+}
