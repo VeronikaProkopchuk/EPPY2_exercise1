@@ -1,7 +1,7 @@
 import pygame
 
 from walking_girl.config import cfg_item
-from walking_girl.scroll import Scroll
+from walking_girl.walk import Walk
 
 class Game:
 
@@ -13,7 +13,7 @@ class Game:
 
         self.__running = False
         self.__fps_clock = pygame.time.Clock()
-        self.__scrolls = [Scroll(200)]
+        self.__walk = [Walk(200)]
 
     def run(self):
         self.__running = True
@@ -32,14 +32,14 @@ class Game:
                 self.__running = False
 
     def __update(self, delta_time):
-        for scroll in self.__scrolls:
-            scroll.update(delta_time)
+        for step in self.__walk:
+            step.update(delta_time)
 
     def __render(self):
         self.__screen.fill(cfg_item("background_color"))
 
-        for scroll in self.__scrolls:
-            scroll.render(self.__screen)
+        for step in self.__walk:
+            step.render(self.__screen)
 
         pygame.display.update()
 

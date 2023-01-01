@@ -9,8 +9,16 @@
         "sprite_size" : [64, 128],
         "total_sprites" : 20
     },
-    "scroll" : {
+    "walk" : {
         "speed" : 0.1
+    },
+    "indexes_for_animation":{
+        "first_sprite_moving_right": 1,
+        "first_sprite_moving_left": 11,
+        "last_sprite_moving_right": 9,
+        "last_sprite_moving_left": 19,
+        "animation_delay": 8
+    
     }
 
 }
