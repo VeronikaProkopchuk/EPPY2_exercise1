@@ -1,7 +1,9 @@
 import pygame
+import os
 
 from walking_girl.config import cfg_item
 from walking_girl.walk import Walk
+from pygame import mixer
 
 class Game:
 
@@ -17,6 +19,8 @@ class Game:
 
     def run(self):
         self.__running = True
+
+
 
         while self.__running:
             delta_time = self.__fps_clock.tick(cfg_item("fps"))

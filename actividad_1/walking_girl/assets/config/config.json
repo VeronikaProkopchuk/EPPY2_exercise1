@@ -9,6 +9,13 @@
         "sprite_size" : [64, 128],
         "total_sprites" : 20
     },
+    "girl_dance" : {
+        "music_path": ["walking_girl", "assets", "music", "dance_music.m4a"],
+        "path" : ["walking_girl", "assets", "images", "dance_animation.png"],
+        "columns" : 6,
+        "sprite_size" : [64, 128],
+        "total_sprites" : 12
+    },
     "walk" : {
         "speed" : 0.1
     },
@@ -17,7 +24,10 @@
         "first_sprite_moving_left": 11,
         "last_sprite_moving_right": 9,
         "last_sprite_moving_left": 19,
-        "animation_delay": 8
+        "first_sprite_dancing": 0,
+        "last_sprite_dancing": 11,
+        "animation_delay": 8,
+        "dance_timer": 500
     
     }
 
