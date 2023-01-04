@@ -10,7 +10,7 @@
         "total_sprites" : 20
     },
     "girl_dance" : {
-        "music_path": ["walking_girl", "assets", "music", "dance_music.m4a"],
+        "music_path": ["walking_girl", "assets", "music", "BloodyMarry.mp3"],
         "path" : ["walking_girl", "assets", "images", "dance_animation.png"],
         "columns" : 6,
         "sprite_size" : [64, 128],

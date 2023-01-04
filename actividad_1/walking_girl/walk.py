@@ -19,6 +19,7 @@ class Walk:
         if self.__direction == "dance":
             self.__dance_timer -= 1
             if self.__dance_timer == 0:
+                pygame.mixer.music.stop()
                 self.__direction = "right"
 
         if self.__direction == "left":
