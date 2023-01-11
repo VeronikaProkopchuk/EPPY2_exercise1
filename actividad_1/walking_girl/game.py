@@ -2,7 +2,7 @@ import pygame
 import os
 
 from walking_girl.config import cfg_item
-from walking_girl.walk import Walk
+from walking_girl.movement import Movement
 
 class Game:
 
@@ -14,13 +14,13 @@ class Game:
 
         self.__running = False
         self.__fps_clock = pygame.time.Clock()
-        self.__walk = [Walk(200)]
+        self.__walk = [Movement(cfg_item("movement", "spawn_position")[0], cfg_item("movement", "spawn_position")[1])]
 
     def run(self):
         self.__running = True
         pygame.mixer.init()
-        pygame.mixer.music.load(os.path.join(*cfg_item("girl_dance", "music_path")))
-        pygame.mixer.music.play(loops=0, start=29.0, fade_ms=2)
+        pygame.mixer.music.load(os.path.join(*cfg_item("music", "music_path")))
+        pygame.mixer.music.play(loops=0, start=cfg_item("music", "music_start"), fade_ms=2)
 
         while self.__running:
             delta_time = self.__fps_clock.tick(cfg_item("fps"))

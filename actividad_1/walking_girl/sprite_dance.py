@@ -3,7 +3,7 @@ import os
 
 from walking_girl.config import cfg_item
 
-class BitmapFontDance:
+class SpriteDance:
 
     def __init__(self):
         self.__image = pygame.image.load(os.path.join(*cfg_item("girl_dance", "path"))).convert_alpha()
@@ -30,6 +30,3 @@ class BitmapFontDance:
                 if self.__index_dance > cfg_item("indexes_for_animation", "last_sprite_dancing"):
                     self.__index_dance = cfg_item("indexes_for_animation", "first_sprite_dancing")
             surface_dst.blit(self.__image, pos, self.__sprites[self.__index_dance])
-
-
-        

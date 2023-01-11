@@ -1,15 +1,15 @@
 import pygame
 
 from walking_girl.config import cfg_item
-from walking_girl.bitmapfont import BitmapFont
-from walking_girl.bitmapfont_dance import BitmapFontDance
+from walking_girl.sprite_walk import SpriteWalk
+from walking_girl.sprite_dance import SpriteDance
 
-class Walk:
+class Movement:
 
-    def __init__(self, y_init):
-        self.__pos = pygame.math.Vector2(cfg_item("screen_size")[0]-420, y_init)
-        self.__bitmapfont = BitmapFont()
-        self.__bitmapfont_dance = BitmapFontDance()
+    def __init__(self, x_init, y_init):
+        self.__pos = pygame.math.Vector2(x_init, y_init)
+        self.__bitmapfont = SpriteWalk()
+        self.__bitmapfont_dance = SpriteDance()
 
         self.__direction = "dance"
         self.__dance_timer = cfg_item("indexes_for_animation", "dance_timer")
@@ -23,12 +23,12 @@ class Walk:
                 self.__direction = "right"
 
         if self.__direction == "left":
-            self.__pos.x -= cfg_item("walk", "speed") * delta_time
+            self.__pos.x -= cfg_item("movement", "speed") * delta_time
             if self.__pos.x <= -cfg_item("girl", "sprite_size")[0]:
                 self.__direction = "right"
 
         if self.__direction == "right":
-            self.__pos.x += cfg_item("walk", "speed") * delta_time
+            self.__pos.x += cfg_item("movement", "speed") * delta_time
             if self.__pos.x >= (cfg_item("screen_size")[0]-120):
                 self.__direction = "left"
 

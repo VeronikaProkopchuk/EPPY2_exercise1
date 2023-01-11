@@ -3,7 +3,7 @@ import os
 
 from walking_girl.config import cfg_item
 
-class BitmapFont:
+class SpriteWalk:
 
     def __init__(self):
         self.__image = pygame.image.load(os.path.join(*cfg_item("girl", "path"))).convert_alpha()
@@ -40,5 +40,3 @@ class BitmapFont:
                 if self.__index_left > cfg_item("indexes_for_animation", "last_sprite_moving_left"):
                     self.__index_left = cfg_item("indexes_for_animation", "first_sprite_moving_left")
             surface_dst.blit(self.__image, pos, self.__sprites[self.__index_left])
-
-        

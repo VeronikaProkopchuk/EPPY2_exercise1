@@ -10,14 +10,18 @@
         "total_sprites" : 20
     },
     "girl_dance" : {
-        "music_path": ["walking_girl", "assets", "music", "BloodyMarry.mp3"],
         "path" : ["walking_girl", "assets", "images", "dance_animation.png"],
         "columns" : 6,
         "sprite_size" : [64, 128],
         "total_sprites" : 12
     },
-    "walk" : {
-        "speed" : 0.1
+    "music" : {
+        "music_path": ["walking_girl", "assets", "music", "BloodyMarry.mp3"],
+        "music_start" : 29.0
+    },
+    "movement" : {
+        "speed" : 0.1,
+        "spawn_position" : [220, 200]
     },
     "indexes_for_animation":{
         "first_sprite_moving_right": 1,
