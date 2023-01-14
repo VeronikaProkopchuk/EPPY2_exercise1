@@ -12,6 +12,8 @@ class SpriteWalk:
 
         self.__index_right = cfg_item("indexes_for_animation", "first_sprite_moving_right")
         self.__index_left = cfg_item("indexes_for_animation", "first_sprite_moving_left")
+
+        #creating delay timer to match animation and movement of the sprite
         self.__timer = cfg_item("indexes_for_animation", "animation_delay")
 
         columns = cfg_item("girl", "columns")

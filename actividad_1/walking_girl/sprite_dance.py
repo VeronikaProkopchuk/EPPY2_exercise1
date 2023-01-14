@@ -11,6 +11,8 @@ class SpriteDance:
         self.__sprites = dict()
 
         self.__index_dance = cfg_item("indexes_for_animation", "first_sprite_dancing")
+
+        #creating delay timer to match animation and movement of the sprite
         self.__timer = cfg_item("indexes_for_animation", "animation_delay")
 
         columns = cfg_item("girl_dance", "columns")
